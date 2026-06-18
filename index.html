@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knights vs Dragons — 19 June 2026</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f4f4f4; display: flex; justify-content: center; align-items: flex-start; min-height: 100vh; padding: 24px 16px; }
+    .card { width: 100%; max-width: 480px; }
+    :root {
+      --k-navy: #002B5C;
+      --k-blue: #0057A8;
+      --k-gold: #C8962A;
+      --k-red: #C8102E;
+      --k-white: #FFFFFF;
+      --color-border-tertiary: rgba(0,0,0,0.12);
+      --color-border-secondary: rgba(0,0,0,0.2);
+      --color-text-primary: #1a1a1a;
+      --color-text-secondary: #666;
+      --color-background-secondary: #f0f0f0;
+      --border-radius-lg: 12px;
+      --border-radius-md: 8px;
+    }
+    .k-header { background: var(--k-navy); border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0; padding: 24px 24px 20px; }
+    .header-eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--k-gold); margin: 0 0 4px; }
+    .header-title { font-size: 22px; font-weight: 500; color: var(--k-white); margin: 0 0 2px; line-height: 1.2; }
+    .header-sub { font-size: 13px; color: rgba(255,255,255,0.55); margin: 0; }
+    .body-wrap { border: 0.5px solid var(--color-border-tertiary); border-top: none; border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg); overflow: hidden; background: #fff; }
+    .section { padding: 16px 20px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+    .section:last-child { border-bottom: none; }
+    .section-label { font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--k-blue); margin: 0 0 12px; display: flex; align-items: center; gap: 6px; }
+    .section-label i { font-size: 13px; }
+    .tl-row { display: grid; grid-template-columns: 68px 10px 1fr; gap: 0 10px; align-items: start; padding: 7px 0; border-bottom: 0.5px solid var(--color-border-tertiary); }
+    .tl-row:last-child { border-bottom: none; }
+    .tl-time { font-size: 12px; font-weight: 500; color: var(--color-text-secondary); padding-top: 3px; text-align: right; }
+    .tl-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--color-border-secondary); margin-top: 5px; }
+    .tl-dot-gold { background: var(--k-gold); width: 10px; height: 10px; margin-top: 4px; }
+    .tl-dot-red { background: var(--k-red); width: 10px; height: 10px; margin-top: 4px; }
+    .tl-title { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 1px; }
+    .tl-detail { font-size: 12px; color: var(--color-text-secondary); margin: 0; }
+    .tl-title-red { color: var(--k-red); }
+    .tl-title-gold { color: var(--k-gold); }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 8px; }
+    .pill { font-size: 12px; color: var(--color-text-secondary); display: flex; align-items: center; gap: 5px; background: var(--color-background-secondary); border-radius: 20px; padding: 4px 11px; }
+    .pill i { font-size: 13px; color: var(--k-blue); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .contact-card { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 12px; display: flex; align-items: center; gap: 10px; }
+    .c-avatar { width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 500; flex-shrink: 0; }
+    .av-gold { background: #F5D98A; color: #633806; }
+    .av-blue { background: #B5D4F4; color: #0C447C; }
+    .c-name { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 1px; }
+    .c-phone { font-size: 12px; color: var(--color-text-secondary); margin: 0; }
+    .fb-row { display: grid; grid-template-columns: 56px 1fr; gap: 0 12px; padding: 6px 0; border-bottom: 0.5px solid var(--color-border-tertiary); align-items: center; }
+    .fb-row:last-child { border-bottom: none; }
+    .fb-time { font-size: 12px; font-weight: 500; color: var(--color-text-secondary); }
+    .fb-label { font-size: 13px; color: var(--color-text-primary); }
+    .footer-strip { background: var(--k-navy); border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg); padding: 12px 20px; text-align: center; }
+    .footer-text { font-size: 12px; color: rgba(255,255,255,0.45); margin: 0; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="k-header">
+      <p class="header-eyebrow">Friday 19 June 2026</p>
+      <h1 class="header-title">Knights vs Dragons</h1>
+      <p class="header-sub">McDonald Jones Stadium — Sports Lounge, Level 2</p>
+    </div>
+    <div class="body-wrap">
+      <div class="section">
+        <p class="section-label"><i class="ti ti-clock" aria-hidden="true"></i>Event timing</p>
+        <div class="tl-row">
+          <span class="tl-time">5:15 PM</span>
+          <div class="tl-dot"></div>
+          <div><p class="tl-title">Gates open</p><p class="tl-detail">Welcome to arrive earlier if you wish</p></div>
+        </div>
+        <div class="tl-row">
+          <span class="tl-time">5:30 PM</span>
+          <div class="tl-dot"></div>
+          <div><p class="tl-title">NSW Cup kick-off</p><p class="tl-detail">vs St. George Illawarra Dragons</p></div>
+        </div>
+        <div class="tl-row">
+          <span class="tl-time">6:00 PM</span>
+          <div class="tl-dot tl-dot-gold"></div>
+          <div><p class="tl-title tl-title-gold">Our arrival</p><p class="tl-detail">We'll be ready to welcome you from this time</p></div>
+        </div>
+        <div class="tl-row">
+          <span class="tl-time">8:00 PM</span>
+          <div class="tl-dot tl-dot-red"></div>
+          <div><p class="tl-title tl-title-red">NRL kick-off</p><p class="tl-detail">vs St. George Illawarra Dragons</p></div>
+        </div>
+      </div>
+      <div class="section">
+        <p class="section-label"><i class="ti ti-tools-kitchen-2" aria-hidden="true"></i>Food &amp; beverage</p>
+        <div class="fb-row"><span class="fb-time">6:00 PM</span><span class="fb-label">Package starts</span></div>
+        <div class="fb-row"><span class="fb-time">7:00 PM</span><span class="fb-label">Grazing menu begins</span></div>
+        <div class="fb-row"><span class="fb-time">10:00 PM</span><span class="fb-label">Package closes</span></div>
+        <p style="font-size:12px; color:var(--color-text-secondary); margin: 10px 0 0;">Four-hour food &amp; beverage package included per ticketed guest.</p>
+      </div>
+      <div class="section">
+        <p class="section-label"><i class="ti ti-phone" aria-hidden="true"></i>Contacts on the day</p>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="c-avatar av-gold">JD</div>
+            <div><p class="c-name">James Dampney</p><p class="c-phone">0457 225 306</p></div>
+          </div>
+          <div class="contact-card">
+            <div class="c-avatar av-blue">KH</div>
+            <div><p class="c-name">Khas</p><p class="c-phone">0483 086 555</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <p class="section-label"><i class="ti ti-info-circle" aria-hidden="true"></i>Good to know</p>
+        <div class="pill-row">
+          <span class="pill"><i class="ti ti-shirt" aria-hidden="true"></i>Smart casual attire</span>
+          <span class="pill"><i class="ti ti-car" aria-hidden="true"></i>Allow extra time for parking</span>
+          <span class="pill"><i class="ti ti-map-pin" aria-hidden="true"></i>Main entrance turnstiles</span>
+        </div>
+        <p style="font-size:12px; color:var(--color-text-secondary); margin: 10px 0 0;">More info: <a href="https://www.newcastleknights.com.au" style="color:var(--k-blue);">Newcastle Knights — Corporate Hospitality</a></p>
+      </div>
+      <div class="footer-strip">
+        <p class="footer-text">We look forward to a great evening together &nbsp;·&nbsp; Ticket attached</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
